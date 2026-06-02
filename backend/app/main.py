@@ -1,9 +1,7 @@
 from dotenv import load_dotenv
 load_dotenv()
-
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-
 from app.routers.project_search import router as project_search_router
 from app.routers.project_tutor import router as project_tutor_router
 
@@ -17,14 +15,12 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Project search (AI discovery)
 app.include_router(
     project_search_router,
     prefix="/api/projects",
     tags=["Project Search"]
 )
 
-# Project tutor (AI mentor)
 app.include_router(
     project_tutor_router,
     prefix="/api/projects",

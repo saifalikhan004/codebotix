@@ -1,4 +1,4 @@
-# routers/project_tutor.py
+# tutor feature
 
 from fastapi import APIRouter, HTTPException
 import json
@@ -16,9 +16,7 @@ router = APIRouter()
 
 
 
-# --------------------------------------------------
-# LOAD COMPONENT KNOWLEDGE (ONCE)
-# --------------------------------------------------
+#train
 
 try:
     with open("knowledge/component.json", "r") as f:
@@ -28,9 +26,7 @@ except Exception:
 
 
 
-# --------------------------------------------------
-# HELPER: SAFE JSON EXTRACTION
-# --------------------------------------------------
+#json 
 
 def extract_json(text: str):
     match = re.search(r"\{.*\}", text, re.DOTALL)
@@ -39,9 +35,7 @@ def extract_json(text: str):
     return json.loads(match.group())
 
 
-# --------------------------------------------------
-# PROJECT DETAILS ENDPOINT
-# --------------------------------------------------
+#project details endpoint
 
 @router.post("/details", response_model=ProjectDetailsResponse)
 def get_project_details(request: ProjectDetailsRequest):
@@ -72,9 +66,7 @@ from app.schemas.chat import (
 from app.ai.prompts import project_tutor_prompt
 
 
-# --------------------------------------------------
-# PROJECT AI TUTOR ENDPOINT
-# --------------------------------------------------
+#project tutor chat endpoint
 
 @router.post("/tutor", response_model=TutorChatResponse)
 def project_tutor_chat(request: TutorChatRequest):

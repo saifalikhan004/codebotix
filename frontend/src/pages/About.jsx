@@ -164,36 +164,86 @@ export default function AboutPage() {
 
   return (
     <div className="min-h-screen bg-sky-50 font-sans mt-10">
-      {/* Company Intro Section */}
-      <section className="px-4 py-16">
+      {/* Hero Section */}
+      <section className="w-full py-16 sm:py-24">
+        <div className="max-w-7xl mx-auto px-4">
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 text-center">About CodeBotix</h1>
+        </div>
+      </section>
+
+      {/* React Bits Component Slot - full-width, no visible wrapper */}
+      
+
+      <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-            <div className="w-full flex justify-center md:justify-start">
-              <img
-                src="/codebotix_logo.jpeg"
-                alt="CodeBotix Logo"
-                className="w-48 h-48 md:w-56 md:h-56 object-contain"
-              />
-            </div>
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                About CodeBotix
-              </h2>
-              <p className="text-gray-700 text-lg leading-relaxed">
-                CodeBotix is a learning-first company focused on Robotics,
-                Artificial Intelligence and hands-on STEM education. We empower
-                learners of all ages to build real-world projects, explore
-                creative problem solving, and develop future-ready skills.
-                Through curated courses, mentorship, and community-driven
-                initiatives, we make technology accessible, engaging, and
-                fun.
+        
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-6">
+              <span className="inline-block rounded-full px-4 py-2 text-sm font-semibold text-rose-900 bg-rose-300">
+                Meet Shahbaz Khan
+              </span>
+              <h1 className="text-4xl md:text-5xl font-bold leading-tight text-gray-900">
+                The Founder{" "}
+                <span className="font-serif italic text-gray-600">
+                  of
+                </span>{" "}
+                CODEBOTIX
+              </h1>
+              <p className="text-xl text-gray-700 leading-relaxed">
+                Description about Shahbaz
               </p>
+              <div className="flex items-center space-x-8 text-sm text-gray-600 pt-4">
+                <div className="flex items-center">
+                  <Users className="h-5 w-5 mr-2 text-gray-500" />
+                  <span className="font-semibold">Speaker</span>
+                </div>
+                <div className="flex items-center">
+                  <Award className="h-5 w-5 mr-2 text-gray-500" />
+                  <span className="font-semibold">ISB'25</span>
+                </div>
+                <div className="flex items-center">
+                  <Heart className="h-5 w-5 mr-2 text-gray-500" />
+                  <span className="font-semibold">Educator</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl">
+                <img
+                  src="/shahbaz1.png"
+                  alt="CODEBOTIX"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-6 -right-6 bg-gray-900 text-white p-6 rounded-2xl shadow-xl max-w-xs">
+                <Quote className="h-8 w-8 mb-2 opacity-50" />
+                <p className="font-semibold">
+                  SAHI HAI
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* React Bits Component Slot - full-width, no visible wrapper */}
+      
+      <section className="py-20 px-4 bg-amber-50">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
+              The{" "}
+              <span className="font-serif italic text-gray-600">Journey</span>
+            </h2>
+            <p className="text-xl text-gray-600">
+              From this to this
+            </p>
+          </div>
+          <div className="relative w-full overflow-clip">
+            <TimelineSection />
+          </div>
+        </div>
+      </section>
       <section className="w-full py-12 bg-transparent">
         <div className="w-full">
           <h3 className="text-2xl font-bold text-gray-900 mb-4 px-4">Showcase</h3>
@@ -218,77 +268,6 @@ export default function AboutPage() {
                 <p className="text-base md:text-lg">This is the third card in the stack</p>
               </ScrollStackItem>
             </ScrollStack>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-        
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-6">
-              <span className="inline-block rounded-full px-4 py-2 text-sm font-semibold text-rose-900 bg-rose-300">
-                Meet Shahbaz Khan
-              </span>
-              <h1 className="text-4xl md:text-5xl font-bold leading-tight text-gray-900">
-                The Founder{" "}
-                <span className="font-serif italic text-gray-600">
-                  of
-                </span>{" "}
-                CODEBOTIX
-              </h1>
-              <p className="text-xl text-gray-700 leading-relaxed">
-                Description about Shahbaz
-              </p>
-              <div className="flex items-center space-x-8 text-sm text-gray-600 pt-4">
-                <div className="flex items-center">
-                  <Users className="h-5 w-5 mr-2 text-gray-500" />
-                  <span className="font-semibold">2M+ Followers</span>
-                </div>
-                <div className="flex items-center">
-                  <Award className="h-5 w-5 mr-2 text-gray-500" />
-                  <span className="font-semibold">Fashion Influencer</span>
-                </div>
-                <div className="flex items-center">
-                  <Heart className="h-5 w-5 mr-2 text-gray-500" />
-                  <span className="font-semibold">Educator</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative">
-              <div className="aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl">
-                <img
-                  src="/shahbaz1.png"
-                  alt="CODEBOTIX"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="absolute -bottom-6 -right-6 bg-gray-900 text-white p-6 rounded-2xl shadow-xl max-w-xs">
-                <Quote className="h-8 w-8 mb-2 opacity-50" />
-                <p className="font-semibold">
-                  QUOTE FROM SHAHBAZ
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      
-      <section className="py-20 px-4 bg-amber-50">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
-              The{" "}
-              <span className="font-serif italic text-gray-600">Journey</span>
-            </h2>
-            <p className="text-xl text-gray-600">
-              From this to this
-            </p>
-          </div>
-          <div className="relative w-full overflow-clip">
-            <TimelineSection />
           </div>
         </div>
       </section>

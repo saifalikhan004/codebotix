@@ -33,11 +33,11 @@ export default function FirstPage() {
   ];
 
   const images = [
-    "https://picsum.photos/400/400?grayscale",
-    "https://picsum.photos/500/500?grayscale",
-    "https://picsum.photos/600/600?grayscale",
-    "https://picsum.photos/700/700?grayscale",
-    "https://picsum.photos/300/300?grayscale",
+    "../insat4.png",
+    "../insta1.png",
+    "../insta2.png",
+    "../class2.jpg",
+    "../adyar2.jpg",
     
   ];
 
@@ -84,10 +84,10 @@ export default function FirstPage() {
   );
 
   return (
-    <div className="w-full bg-pink-50 text-gray-900">
+    <div className="w-full bg-pink-50 text-gray-900 font-inter">
       {/* HERO */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-pink-50 via-purple-50 to-indigo-100" />
+        <div className="absolute inset-0 bg-gradient-to-b from-green-50 via-emerald-100 to-lime-100" />
         <div className="absolute inset-0 opacity-40 pointer-events-none" aria-hidden>
           <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
             <defs>
@@ -103,26 +103,48 @@ export default function FirstPage() {
         <div className="relative w-full px-6 pt-24 pb-16 md:pt-32 md:pb-24">
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <div className="ml-0 md:ml-[100px]">
-              <p className="inline-flex items-center gap-2 rounded-full bg-purple-200 text-purple-900 px-3 py-1 text-xs font-semibold">
-                <span className="h-2 w-2 rounded-full bg-purple-500" />
-                Real hardware. Age-appropriate AI. Project-first learning.
-              </p>
-              <h1 className="mt-6 text-5xl md:text-6xl font-extrabold leading-[1.05]">
-                <span className="block text-6xl md:text-7xl lg:text-8xl">Robots. AI. 3D.</span>
-                <span className="block bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">Built by kids.</span>
+              <h1 className="mt-6 text-4xl md:text-5xl font-extrabold leading-tight">
+                The gap between curiosity and real skills
               </h1>
-              <p className="mt-6 text-lg md:text-xl text-gray-600 max-w-xl">
-                CodeBotix helps middle and high school students turn curiosity into
-                real engineering — they build with sensors, motors, and vision,
-                and learn how machines see, hear, and decide.
+              <p className="mt-3 inline-flex items-center gap-2 rounded-full bg-green-200 text-green-900 px-3 py-1 text-xs font-semibold">
+                <span className="h-2 w-2 rounded-full bg-green-500" />
+                What parents feel about their children's learning system
               </p>
-              <div className="mt-8 flex flex-wrap gap-3">
-                <Link to="/about" className="px-6 py-3 rounded-xl bg-purple-300 text-purple-900 font-semibold hover:scale-[1.02] transition">
-                  What is CodeBotix?
-                </Link>
-                <Link to="/gallery" className="px-6 py-3 rounded-xl border border-purple-200 hover:border-purple-400 font-semibold hover:bg-purple-50 transition">
-                  See real student builds
-                </Link>
+
+              <div className="mt-6 grid sm:grid-cols-2 gap-4 max-w-2xl">
+                <div className="rounded-2xl bg-white p-5 border border-gray-200 shadow-sm">
+                  <p className="text-sm font-bold text-gray-900">Only Theory, No Practice</p>
+                  <p className="mt-1 text-sm text-gray-600">Kids study from books but never build anything real</p>
+                </div>
+                <div className="rounded-2xl bg-white p-5 border border-gray-200 shadow-sm">
+                  <p className="text-sm font-bold text-gray-900">Missing Future Skills</p>
+                  <p className="mt-1 text-sm text-gray-600">No exposure to AI, robotics, or 3D printing in schools</p>
+                </div>
+                <div className="rounded-2xl bg-white p-5 border border-gray-200 shadow-sm">
+                  <p className="text-sm font-bold text-gray-900">Boring Learning</p>
+                  <p className="mt-1 text-sm text-gray-600">Memorization instead of exciting hands-on projects</p>
+                </div>
+                <div className="rounded-2xl bg-white p-5 border border-gray-200 shadow-sm">
+                  <p className="text-sm font-bold text-gray-900">Unprepared for Tomorrow</p>
+                  <p className="mt-1 text-sm text-gray-600">Kids lack tech skills needed for future careers</p>
+                </div>
+              </div>
+
+              <div className="mt-8 rounded-3xl bg-gradient-to-r from-green-100 to-emerald-100 p-6 border border-emerald-200 max-w-xl">
+                <p className="text-xl md:text-2xl font-extrabold text-green-900">That's Why We Created CodeBotix</p>
+                <p className="mt-2 text-gray-700">Real projects. Real skills. Real preparation for the future.</p>
+                <div className="mt-6">
+                  <a
+                    href="https://calendly.com/codebotix/free-demo-class?month=2026-01"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-green-500 text-white font-bold hover:bg-green-600 hover:scale-[1.02] transition"
+                    aria-label="Book a Free Demo"
+                  >
+                    Book a Free Demo now
+                    <span className="text-xl">›</span>
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -130,8 +152,8 @@ export default function FirstPage() {
               <div className="aspect-[4/3] rounded-3xl overflow-hidden border border-gray-200 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.2)] bg-white">
                 <img src="/insta3.png" alt="Students building robots at CodeBotix" className="h-full w-full object-cover" />
               </div>
-              <div className="absolute -bottom-6 -right-4 bg-purple-900 text-white rounded-2xl px-4 py-3 flex items-center gap-3 shadow-lg">
-                <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-purple-300 text-purple-900 font-bold">AI</span>
+              <div className="absolute -bottom-6 -right-4 bg-green-900 text-white rounded-2xl px-4 py-3 flex items-center gap-3 shadow-lg">
+                <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-green-300 text-green-900 font-bold">AI</span>
                 <span className="text-sm leading-tight">
                   Guided builds in our
                   <br /> student-friendly AI Lab
@@ -140,27 +162,45 @@ export default function FirstPage() {
             </div>
           </div>
 
-          {/* Robotic components strip */}
-          <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
-            {[
-              { icon: <SensorIcon />, label: "Sensors" },
-              { icon: <GearIcon />, label: "Motors & Gears" },
-              { icon: <ChipIcon />, label: "Microcontrollers" },
-              { icon: <WaveIcon />, label: "Computer Vision" },
-              { icon: <GearIcon />, label: "3D Design" },
-            ].map((item, idx) => (
-              <div key={idx} className="flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-4 py-3 shadow-sm">
-                {item.icon}
-                <span className="text-sm font-semibold">{item.label}</span>
+          {/* Trust strip */}
+          <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="rounded-2xl border border-gray-200 bg-white px-6 py-5 shadow-sm text-center">
+              <p className="text-3xl md:text-4xl font-extrabold text-gray-900">6000+</p>
+              <div className="mt-1 flex items-center justify-center gap-2 text-sm font-semibold text-gray-600">
+                {/* Users icon */}
+                <svg className="h-5 w-5 text-green-600" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                  <path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4zm0 2c-3.33 0-6 2.02-6 4.5V21h12v-2.5C18 16.02 15.33 14 12 14z"/>
+                </svg>
+                <span>Happy Students</span>
               </div>
-            ))}
+            </div>
+            <div className="rounded-2xl border border-gray-200 bg-white px-6 py-5 shadow-sm text-center">
+              <p className="text-3xl md:text-4xl font-extrabold text-gray-900">15</p>
+              <div className="mt-1 flex items-center justify-center gap-2 text-sm font-semibold text-gray-600">
+                {/* Calendar icon */}
+                <svg className="h-5 w-5 text-green-600" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                  <path d="M7 2h2v2h6V2h2v2h3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h3V2zm14 8H3v10h18V10z"/>
+                </svg>
+                <span>Days Per Level</span>
+              </div>
+            </div>
+            <div className="rounded-2xl border border-gray-200 bg-white px-6 py-5 shadow-sm text-center">
+              <p className="text-3xl md:text-4xl font-extrabold text-gray-900">3</p>
+              <div className="mt-1 flex items-center justify-center gap-2 text-sm font-semibold text-gray-600">
+                {/* Layers icon */}
+                <svg className="h-5 w-5 text-green-600" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                  <path d="M12 2 3 7l9 5 9-5-9-5zm0 7L3 14l9 5 9-5-9-5zm0 7-6-3.33L3 14l9 5 9-5-3 1.67L12 16z"/>
+                </svg>
+                <span>Learning Tracks</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* WHY AI & ROBOTICS (stats) */}
-      <section className="w-full bg-yellow-100 px-10 py-10">
-        <div className="w-full">
+      <section className="w-full bg-yellow-100 px-6 py-24">
+        <div className="relative px-8 py-16 md:px-16 md:py-20">
           <div className="grid md:grid-cols-2 gap-10 items-start">
             <div>
               <h2 className="text-3xl md:text-4xl font-extrabold leading-tight">
@@ -202,7 +242,7 @@ export default function FirstPage() {
       <section className="w-full px-6 py-24">
         <div className="w-full space-y-12">
           {/* About section */}
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-blue-50 to-cyan-100">
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-b from-pink-50 via-purple-50 to-indigo-100">
             <div className="absolute inset-0 opacity-20" aria-hidden>
               <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
                 <defs>
@@ -214,18 +254,31 @@ export default function FirstPage() {
               </svg>
             </div>
             <div className="relative px-8 py-16 md:px-16 md:py-20">
-              <h3 className="text-3xl md:text-5xl font-extrabold leading-tight">
-                Who we are — turning explorers into innovators
-              </h3>
-              <p className="mt-3 md:mt-4 text-lg md:text-xl text-gray-700 max-w-3xl">
-                A structured path: explorer → builder → innovator. Real hardware, real outcomes.
-                See how CodeBotix mentors guide kids to present projects with confidence.
-              </p>
-              <div className="mt-8">
-                <Link to="/about" className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-cyan-300 text-cyan-900 font-bold hover:scale-[1.02] transition">
-                  Learn our story
-                  <span className="text-xl">›</span>
-                </Link>
+              <div className="grid md:grid-cols-2 gap-10 items-center">
+                {/* Left: Level 1 illustration */}
+                <div className="order-2 md:order-1">
+                  <img
+                    src="/lvl1.svg"
+                    alt="CodeBotix Level 1"
+                    className="w-full max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto md:mx-0 mix-blend-multiply opacity-80 filter saturate-150"
+                  />
+                </div>
+                {/* Right: Text content aligned right */}
+                <div className="order-1 md:order-2 text-right">
+                  <h3 className="text-3xl md:text-5xl font-extrabold leading-tight">
+                    Who we are — turning explorers into innovators
+                  </h3>
+                  <p className="mt-3 md:mt-4 text-lg md:text-xl text-gray-700 md:ml-auto md:max-w-xl">
+                    A structured path: explorer → builder → innovator. Real hardware, real outcomes.
+                    See how CodeBotix mentors guide kids to present projects with confidence.
+                  </p>
+                  <div className="mt-8 flex justify-end">
+                    <Link to="/about" className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-cyan-300 text-cyan-900 font-bold hover:scale-[1.02] transition">
+                      Learn our story
+                      <span className="text-xl">›</span>
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -260,12 +313,7 @@ pauseBetweenAnimations={1}
                   
                 />
               </div>
-              <div className="mt-5 flex justify-center">
-                <Link to="/gallery" className="inline-flex items-center gap-3 px-7 py-3 rounded-2xl border border-gray-300 font-bold hover:border-lime-500 hover:bg-lime-50 transition">
-                  View More
-                  <span className="text-xl">›</span>
-                </Link>
-              </div>
+              {/* Gallery button removed */}
             </div>
           </div>
 
@@ -372,7 +420,7 @@ pauseBetweenAnimations={1}
             </div>
           </div>
 
-          <p className="mt-4 text-xs text-neutral-400">Reviews are illustrative snippets for layout. Contact us to see more.</p>
+          
         </div>
       </section>
     </div>

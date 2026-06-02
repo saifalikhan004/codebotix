@@ -8,9 +8,7 @@ from pydantic import BaseModel
 from typing import List
 
 
-# -------------------------
-# PROJECT SEARCH (EXISTING)
-# -------------------------
+#project searching feature
 
 class ProjectSearchRequest(BaseModel):
     components: List[str]
@@ -24,9 +22,7 @@ class Project(BaseModel):
     difficulty: str
 
 
-# -------------------------
-# PROJECT WORKSPACE (NEW)
-# -------------------------
+#project workspace feature
 
 class ProjectDetailsRequest(BaseModel):
     project_id: str

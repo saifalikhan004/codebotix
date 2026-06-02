@@ -5,11 +5,8 @@ All AI prompts live here.
 Changing prompts here improves AI behavior globally.
 """
 
-
-# --------------------------------------------------
-# PROJECT SEARCH PROMPT (AI LAB)
-# --------------------------------------------------
-
+#search prompt by saif 
+#this will search projects 
 def project_search_prompt(components: list[str], level: str):
     return f"""
 You are an educational robotics assistant for school students.
@@ -41,9 +38,7 @@ RETURN THIS EXACT JSON STRUCTURE:
   }}
 ]
 """
-# --------------------------------------------------
-# PROJECT DETAILS PROMPT (WORKSPACE LOAD)
-# --------------------------------------------------
+#workspace prompt
 
 def project_details_prompt(
     project_id: str,
@@ -89,9 +84,7 @@ RETURN ONLY THIS JSON FORMAT:
   "learning_outcomes": []
 }}
 """
-# --------------------------------------------------
-# PROJECT AI TUTOR PROMPT (CHAT)
-# --------------------------------------------------
+#tutor prompt
 
 def project_tutor_prompt(
     project_context: dict,

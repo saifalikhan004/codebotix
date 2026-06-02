@@ -122,7 +122,29 @@ body {
   width: max-content;
   animation: marquee-ltr 30s linear infinite;
 }
+.marquee:hover .marquee__track,
+.marquee:focus-within .marquee__track {
+  animation-play-state: paused;
+}
 @keyframes marquee-ltr {
   from { transform: translateX(-50%); }
   to { transform: translateX(0); }
+}
+
+/* Desktop-only subtle floating animation for nav demo button */
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@media (min-width: 1024px) {
+  .nav-float-demo {
+    animation: floatY 3s ease-in-out infinite;
+    will-change: transform;
+  }
+}
+
+/* Utility: Inter font for page-specific usage */
+.font-inter {
+  font-family: 'Inter', sans-serif;
 }

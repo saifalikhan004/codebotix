@@ -174,7 +174,7 @@ const Hero = () => {
         <div className="hero-img absolute top-0 w-full h-dvh -z-[1] scale-[1.5]">
           <div style={{ width: '100%', height: '1000px', position: 'relative' }}>
   <Prism
-    animationType="hover"
+    animationType="rotate"
     timeScale={0.7}
     height={4.3}
     baseWidth={5.8}
@@ -193,8 +193,10 @@ const Hero = () => {
         <div className={isFirstVisit ? "nav -translate-y-[120%]" : "nav"}>
           <Nav />
         </div>
+        
 
         <header className="header w-full flex flex-col items-center gap-[1.5em] absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2">
+        
           <div className="hero-copy w-full flex flex-col items-center justify-center ">
             <div className="line overflow-hidden">
               <h1 className="text-white text-[1.5rem] text-center lg:text-[5rem] font-medium leading-none -translate-y-[120%]">
@@ -220,13 +222,14 @@ const Hero = () => {
           </div>
         </header>
 
-        <div className="cta absolute left-1/2 bottom-6 sm:bottom-8 md:bottom-12 w-[94%] sm:w-[90%] md:w-4/5 lg:w-1/2 h-[56px] sm:h-[60px] md:h-[68px] p-1 md:p-2 flex justify-end bg-transparent rounded-full border-2 border-black shadow-[0_10px_30px_rgba(0,0,0,0.25)] scale-0 -translate-x-1/2">
-          <div className="cta-label absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 overflow-hidden">
+        <div className="cta group absolute left-1/2 bottom-6 sm:bottom-8 md:bottom-12 w-[94%] sm:w-[90%] md:w-4/5 lg:w-1/2 xl:max-w-[800px] h-[56px] sm:h-[60px] md:h-[68px] px-2 md:px-3 grid grid-cols-[auto_1fr_auto] items-center bg-transparent rounded-full border-2 border-black shadow-[0_10px_30px_rgba(0,0,0,0.25)] scale-0 -translate-x-1/2 z-10 cursor-pointer transition-colors duration-200 hover:bg-black/5 backdrop-blur-sm active:translate-y-[1px]">
+          <div className="h-full aspect-square" aria-hidden="true"></div>
+          <div className="cta-label justify-self-center overflow-hidden">
             <a
               href="https://online.codebotix.in/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-black text-[0.9rem] sm:text-sm md:text-base font-medium uppercase tracking-wide translate-y-[120%]"
+              className="text-black text-[0.9rem] sm:text-sm md:text-base font-medium uppercase tracking-wide transition-all duration-200 group-hover:tracking-wider"
             >
               EXPLORE COURSES
             </a>
@@ -235,7 +238,7 @@ const Hero = () => {
             href="https://online.codebotix.in/"
             target="_blank"
             rel="noopener noreferrer"
-            className="cta-icon h-full aspect-square flex items-center justify-center text-white bg-brand-dark rounded-full cursor-pointer scale-0 text-xl sm:text-2xl md:text-3xl"
+            className="cta-icon justify-self-end h-full aspect-square flex items-center justify-center text-white bg-transparent rounded-full cursor-pointer scale-0 text-xl sm:text-2xl md:text-3xl transition-colors duration-200 group-hover:bg-black active:translate-y-[1px]"
           >
             <IoArrowForwardOutline />
           </a>

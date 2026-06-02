@@ -28,7 +28,7 @@ def search_projects(payload: ProjectSearchRequest):
         return json.loads(cleaned)
 
     except Exception as e:
-        # 🔥 IMPORTANT: expose the real error
+    
         raise HTTPException(
             status_code=500,
             detail=f"Gemini generation failed: {str(e)}"

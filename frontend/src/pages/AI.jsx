@@ -1,18 +1,15 @@
 import { useState } from "react";
 import { useNavigate, NavLink } from "react-router-dom";
-
 import ComponentSelector from "../components/ComponentSelector";
 import ProjectGrid from "../components/ProjectGrid";
 import { searchProjects } from "../../services/api";
-
-// ✅ AI Lab Context
 import { useAiLab } from "../context/AiLabContext";
 import Aurora from '../components/Aurora';
 
 export default function AI() {
   const navigate = useNavigate();
 
-  // ✅ Session state from Context
+  //session state
   const {
     selectedComponents,
     setSelectedComponents,
@@ -21,7 +18,7 @@ export default function AI() {
     setActiveProject,
   } = useAiLab();
 
-  // Local UI state only
+  // ui state
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -76,7 +73,6 @@ export default function AI() {
           {[
             { title: "Home", to: "/" },
             { title: "About", to: "/about" },
-            { title: "Gallery", to: "/gallery" },
             { title: "Blogs", to: "/blogs" },
           ].map((link) => (
             <NavLink
@@ -131,7 +127,6 @@ export default function AI() {
             {[
               { title: "Home", to: "/" },
               { title: "About", to: "/about" },
-              { title: "Gallery", to: "/gallery" },
               { title: "Blogs", to: "/blogs" },
             ].map((link) => (
               <NavLink

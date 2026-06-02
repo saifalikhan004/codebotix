@@ -43,7 +43,7 @@ export default function TimelineSection() {
   }, []);
 
   return (
-    <section className="relative py-32 bg-neutral-950 text-white overflow-hidden">
+    <section className="relative py-32 bg-amber-50 text-gray-900 overflow-hidden">
       <h2 className="text-4xl font-bold text-center mb-20">
         Our Journey
       </h2>

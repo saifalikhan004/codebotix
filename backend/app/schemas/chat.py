@@ -1,4 +1,4 @@
-# schemas/chat.py
+#tutor chat feature
 
 from pydantic import BaseModel
 from typing import List

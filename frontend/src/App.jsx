@@ -10,7 +10,7 @@ function App() {
 
   // Hide footer on specific routes (AI page)
   const hideFooterPaths = ["/ai","/workspace"]; // add more paths if needed
-  const hideNavPaths = ["/ai"]; // use inline nav on AI page
+  const hideNavPaths = ["/ai", "/"]; // hide global Nav on AI and Home (Hero has its own nav)
   const showFooter = !hideFooterPaths.includes(location.pathname);
   const showNav = !hideNavPaths.includes(location.pathname);
   return (
